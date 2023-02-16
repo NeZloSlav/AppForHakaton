@@ -9,10 +9,12 @@
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         Background="Transparent"
+        WindowStyle="None"
+        AllowsTransparency="True"
         Height="800"
         Width="1200">
     
-    <Grid>
+    <Border CornerRadius="20" ClipToBounds="True">
         <Frame x:Name="frmMain" NavigationUIVisibility="Hidden"/>
-    </Grid>
+    </Border>
 </Window>

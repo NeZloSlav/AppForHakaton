@@ -7,118 +7,127 @@
       mc:Ignorable="d" 
       d:DesignHeight="800"
       d:DesignWidth="1200"
-      Background="AliceBlue"
       Title="MainPage">
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="7*" />
-        </Grid.RowDefinitions>
-
+    <Border CornerRadius="20" Background="AliceBlue">
         <Grid>
-            
-            <!--Логотип-->
 
-            <Border>
-                <Border.Style>
-                    <Style TargetType="Border">
-                        <Setter Property="Background" Value="CadetBlue" />
-                        <Setter Property="VerticalAlignment" Value="Center" />
-                        <Setter Property="HorizontalAlignment" Value="Left" />
-                        <Setter Property="Padding" Value="10" />
-                        <Setter Property="Margin" Value="15 15 0 15" />
-                    </Style>
-                </Border.Style>
+            <Grid Grid.Column="1">
 
-                <TextBlock>
-                    <TextBlock.Style>
-                        <Style TargetType="TextBlock">
-                            <Setter Property="FontSize" Value="20" />
-                            <Setter Property="TextWrapping" Value="Wrap" />
-                            <Setter Property="TextAlignment" Value="Left" />
-                            <Setter Property="HorizontalAlignment" Value="Left" />
-                            <Setter Property="FontWeight" Value="Light" />
-                        </Style>
-                    </TextBlock.Style>
-                    
-                    <Run>Наши</Run>
-                    <LineBreak/>
-                    <Run>студенты</Run>
-                </TextBlock>
-            </Border>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
 
-            <!--Титульник-->
-            <Border BorderThickness=" 0 0 0 2" BorderBrush="CadetBlue" VerticalAlignment="Center" HorizontalAlignment="Center">
-                <TextBlock Text="Главная">
-                    <TextBlock.Style>
-                        <Style TargetType="TextBlock">
-                            <Setter Property="Foreground" Value="CadetBlue" />
-                            <Setter Property="FontSize" Value="25" />
-                            <Setter Property="HorizontalAlignment" Value="Center" />
-                            <Setter Property="VerticalAlignment" Value="Center" />
-                        </Style>
-                    </TextBlock.Style>
-                </TextBlock>
-            </Border>
-                
-            <!--Авторизация-->
-            <Border>
-                <Border.Style>
-                    <Style TargetType="Border">
-                        <Setter Property="HorizontalAlignment" Value="Right" />
-                        <Setter Property="VerticalAlignment" Value="Center" />
-                        
-                    </Style>
-                </Border.Style>
-
-                <TextBlock Text="Войти">
-                    <TextBlock.Style>
-                        <Style TargetType="TextBlock">
-                            
-                        </Style>
-                    </TextBlock.Style>
-                </TextBlock>
-
-            </Border>
-            
-            <!--Разделитель-->
-            <Border Height="2" Background="LightGray" VerticalAlignment="Bottom"/>
-
-
-
-            <!--<Border Background="#00bfff">
-
-                <TextBlock Text="Что-то"
-                   HorizontalAlignment="Center"
-                   FontSize="50"
-                   VerticalAlignment="Center"/>
-
-
-            </Border>-->
-        </Grid>
-
-        <Grid Grid.Row="1">
-
-            <Button x:Name="btnIStudent" Width="400" Height="400" HorizontalAlignment="Left" Click="btnIStudent_Click">
-                <Button.Content>
                     <Border>
-                        <TextBlock Text="Я студент"
-                                   FontSize="50"/>
-                    </Border>
-                </Button.Content> 
-            </Button>
+                        <Border Background="AliceBlue" CornerRadius="20 20 0 0" Height="100">
+                            <Grid>
+                                <Image Source="/AppImages/logo54.png" Height="60" HorizontalAlignment="Left" Margin="20 0 0 0" Stretch="UniformToFill" Width="75"/>
 
-            <Button x:Name="btnIApplicant" Width="400" Height="400" HorizontalAlignment="Right" Click="btnIApplicant_Click">
-                <Button.Content>
-                    <Border>
-                        <TextBlock Text="Я соискатель"
-                                   FontSize="50"/>
-                    </Border>
-                </Button.Content>
-            </Button>
+                                <Label Content="#НашиСтуденты" HorizontalAlignment="Center" FontSize="40" 
+                                       VerticalAlignment="Center" FontWeight="Regular" Foreground="#363636"/>
+                            </Grid>
+                        </Border>
 
+
+                    </Border>
+
+                    <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Hidden">
+                        <StackPanel>
+
+                            <Grid Grid.Row="1" VerticalAlignment="Center" Height="400">
+
+                                <Image Source="/AppImages/college.jpg" Stretch="UniformToFill" VerticalAlignment="Center" />
+
+                                <Border>
+                                    <Border.Background>
+                                        <SolidColorBrush Color="#363636" Opacity="0.75"/>
+                                    </Border.Background>
+                                </Border>
+
+                                <TextBlock FontSize="50"  Foreground="AliceBlue" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="100 0 0 0"> 
+                                    <Run FontWeight="Regular">Лучшие </Run>
+                                    <Run >студенты</Run>
+                                    <LineBreak/>
+                                    <Run FontWeight="Regular">у нас!</Run>
+
+                                </TextBlock>
+
+                                <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 0 100 0" TextWrapping="Wrap" Width="400" FontSize="20" Foreground="AliceBlue">
+                                    <Run>Хотите найти </Run>
+                                    <Run Foreground="OrangeRed">лучших </Run>
+                                    <Run>начинающих специалистов в</Run>
+                                    <Hyperlink Foreground="CornflowerBlue" TextDecorations="Underline">IT-сфере</Hyperlink>
+                                    <Run>? Вы на правильном пути!</Run>
+                                    <Run> Подтвердите, что вы  </Run>
+                                    <Hyperlink Foreground="OrangeRed">соискатель</Hyperlink>
+                                    <Run>и Вам будет предоставлен список наших специалистов!</Run>
+                                </TextBlock>
+
+                            </Grid>
+
+                            <Grid Grid.Row="1" Height="400">
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*" />
+                                    <ColumnDefinition Width="1*" />
+                                </Grid.ColumnDefinitions>
+                                
+                                
+                                <Button  Background="OrangeRed">
+
+                                    <Grid Width="500" Height="350">
+                                        <TextBlock Text="Я - студент"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                                   Margin="0 0 0 30"
+                                           FontSize="70"
+                                           FontWeight="Bold"
+                                           Foreground="#363636"/>
+
+                                        <Image Source="/AppImages/student.png"
+                                                   Width="350" 
+                                                   Height="350" 
+                                                   Margin="-50 0 0 0"
+                                               Opacity="0.4"
+                                                   VerticalAlignment="Bottom"
+                                                   HorizontalAlignment="Left"/>
+
+                                    </Grid>
+                                </Button>
+
+                                <Button  Background="CornflowerBlue" Grid.Column="1">
+
+                                    <Grid Width="500" Height="350">
+                                        <TextBlock Text="Я - соискатель"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                                   Margin="0 0 0 30"
+                                           FontSize="70"
+                                           FontWeight="Bold"
+                                           Foreground="#363636"/>
+
+                                        <Image Source="/AppImages/finder.png"
+                                                   Width="350" 
+                                                   Height="350" 
+                                                   Margin="-50 0 0 0"
+                                               Opacity="0.4"
+                                                   VerticalAlignment="Bottom"
+                                                   HorizontalAlignment="Left"/>
+
+                                    </Grid>
+                                </Button>
+
+                            </Grid>
+                        </StackPanel>
+                    </ScrollViewer>
+
+
+                </Grid>
+
+
+            </Grid>
         </Grid>
-
-    </Grid>
+    </Border>
 </Page>
