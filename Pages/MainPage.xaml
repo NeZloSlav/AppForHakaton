@@ -30,7 +30,6 @@
                             </Grid>
                         </Border>
 
-
                     </Border>
 
                     <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Hidden">
@@ -54,16 +53,48 @@
 
                                 </TextBlock>
 
-                                <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 0 100 0" TextWrapping="Wrap" Width="400" FontSize="20" Foreground="AliceBlue">
+                                <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 0 100 0" TextWrapping="Wrap" Width="400" FontSize="24" Foreground="AliceBlue">
                                     <Run>Хотите найти </Run>
                                     <Run Foreground="OrangeRed">лучших </Run>
                                     <Run>начинающих специалистов в</Run>
-                                    <Hyperlink Foreground="CornflowerBlue" TextDecorations="Underline">IT-сфере</Hyperlink>
+                                    <Run Foreground="CornflowerBlue">IT-сфере</Run>
                                     <Run>? Вы на правильном пути!</Run>
                                     <Run> Подтвердите, что вы  </Run>
-                                    <Hyperlink Foreground="OrangeRed">соискатель</Hyperlink>
+                                    <Hyperlink Foreground="OrangeRed" Click="btnIApplicant_Click">соискатель</Hyperlink>
                                     <Run>и Вам будет предоставлен список наших специалистов!</Run>
                                 </TextBlock>
+
+                            </Grid>
+
+                            <Grid Grid.Row="1" Height="400">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*" />
+                                    <ColumnDefinition Width="1*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Grid Margin="50" Grid.Column="1">
+                                    <Image Source="/AppImages/studentsTogether.jpg" Stretch="UniformToFill" HorizontalAlignment="Right"/>
+                                    
+                                    <Border>
+                                        <Border.Background>
+                                            <SolidColorBrush Color="#363636" Opacity="0.2"/>
+                                        </Border.Background>
+                                    </Border>
+                                </Grid>
+
+                                <Border Padding="100" Grid.Column="0">
+                                    <TextBlock FontSize="24" TextWrapping="Wrap">
+                                            
+                                        
+                                        
+                                        <Hyperlink Foreground="OrangeRed" Click="btnIStudent_Click">Ты студент?</Hyperlink>
+                                        <Run>Хочешь, чтобы тебя заметили</Run>
+                                        <Run Foreground="CornflowerBlue">крупные компании?</Run>
+                                        <Run>Заполни своё   </Run>
+                                        <Hyperlink Foreground="OrangeRed" Click="btnIStudent_Click">резюме</Hyperlink>
+                                        <Run>и размести на сайте нашего колледжа.</Run>
+                                    </TextBlock>
+                                </Border>
 
                             </Grid>
 
@@ -73,23 +104,27 @@
                                     <ColumnDefinition Width="1*" />
                                     <ColumnDefinition Width="1*" />
                                 </Grid.ColumnDefinitions>
-                                
-                                
-                                <Button  Background="OrangeRed">
 
-                                    <Grid Width="500" Height="350">
+
+                                <Button  Background="OrangeRed" Click="btnIStudent_Click">
+
+                                    <Grid Width="400" Height="350">
                                         <TextBlock Text="Я - студент"
-                                           VerticalAlignment="Center"
-                                           HorizontalAlignment="Center"
-                                                   Margin="0 0 0 30"
-                                           FontSize="70"
+                                           VerticalAlignment="Top"
+                                           HorizontalAlignment="Right"
+                                                   Margin="0 20 0 0"
+                                           FontSize="45"
                                            FontWeight="Bold"
-                                           Foreground="#363636"/>
+                                           Foreground="#363636">
+                                            <TextBlock.RenderTransform>
+                                                <RotateTransform Angle="-90" CenterX="240" CenterY="30" />
+                                            </TextBlock.RenderTransform>
+                                        </TextBlock>
 
                                         <Image Source="/AppImages/student.png"
-                                                   Width="350" 
-                                                   Height="350" 
-                                                   Margin="-50 0 0 0"
+                                                   Width="320" 
+                                                   Height="320" 
+                                                   Margin="-70 0 0 0"
                                                Opacity="0.4"
                                                    VerticalAlignment="Bottom"
                                                    HorizontalAlignment="Left"/>
@@ -97,24 +132,30 @@
                                     </Grid>
                                 </Button>
 
-                                <Button  Background="CornflowerBlue" Grid.Column="1">
+                                <Button  Background="CornflowerBlue" Grid.Column="1" Click="btnIApplicant_Click">
 
-                                    <Grid Width="500" Height="350">
+                                    <Grid Width="400" Height="350">
+
                                         <TextBlock Text="Я - соискатель"
-                                           VerticalAlignment="Center"
-                                           HorizontalAlignment="Center"
-                                                   Margin="0 0 0 30"
-                                           FontSize="70"
-                                           FontWeight="Bold"
-                                           Foreground="#363636"/>
+                                                   VerticalAlignment="Top"
+                                                   HorizontalAlignment="Right"
+                                                   Margin="0 20 0 0"
+                                                   FontSize="45"
+                                                   FontWeight="Bold"
+                                                   Foreground="#363636">
+
+                                            <TextBlock.RenderTransform>
+                                                <RotateTransform Angle="-90" CenterX="300" CenterY="20" />
+                                            </TextBlock.RenderTransform>
+                                        </TextBlock>
 
                                         <Image Source="/AppImages/finder.png"
-                                                   Width="350" 
-                                                   Height="350" 
-                                                   Margin="-50 0 0 0"
+                                               Width="320" 
+                                               Height="320" 
+                                               Margin="-70 0 0 0"
                                                Opacity="0.4"
-                                                   VerticalAlignment="Bottom"
-                                                   HorizontalAlignment="Left"/>
+                                               VerticalAlignment="Bottom"
+                                               HorizontalAlignment="Left"/>
 
                                     </Grid>
                                 </Button>

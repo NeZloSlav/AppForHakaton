@@ -10,5 +10,11 @@ namespace Hakaton.ClassHelper
     public class NavigateClass
     {
         public static Frame navigFrame;
+
+        public static Frame formsFrame;
+
+        public static Frame leftPartFrame;
+
+        public static Frame rightPartFrame;
     }
 }

@@ -7,90 +7,45 @@
       mc:Ignorable="d" 
       d:DesignHeight="800"
       d:DesignWidth="1200"
-      Background="AliceBlue"
       Title="StudentsCatalog">
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="4*" />
-        </Grid.RowDefinitions>
+    <Border CornerRadius="20" Background="AliceBlue">
+        <Grid>
 
+            <Grid Grid.Column="1">
 
-        <Border Background="#00bfff">
-            <TextBlock Text="Вход" 
-                       FontSize="40"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"/>
-
-        </Border>
-
-        <Grid Grid.Row="1">
-            <Border VerticalAlignment="Center" HorizontalAlignment="Center" Width="600" >
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="1*"/>
-                        <RowDefinition Height="1*"/>
-                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
 
-                    <Grid HorizontalAlignment="Center" Width="600">
-                        <TextBlock Text="Номер телефона"
-                                   FontSize="30"
-                                   HorizontalAlignment="Left"
-                                   />
+                    <Border>
+                        <Border Background="AliceBlue" CornerRadius="20 20 0 0" Height="100">
+                            <Grid>
+                                <Button HorizontalAlignment="Left" Margin="20 0 0 0" Background="Transparent" VerticalAlignment="Center" BorderThickness="0" Click="Button_Click">
+                                    <Button.Content>
+                                        <Image Source="/AppImages/logo54.png" Height="60"  Stretch="UniformToFill" Width="75"/>
+                                    </Button.Content>
+                                </Button>
+                                
 
-                        <TextBox Grid.ColumnSpan="2"
-                                 HorizontalAlignment="Right"
-                                 VerticalAlignment="Center"
-                                 FontSize="30"
-                                 Margin="20 0 0 0"
-                                 Background="Black"
-                                 Foreground="AliceBlue"
-                                 Width="300"/>
+                                <Label Content="#НашиСтуденты" HorizontalAlignment="Center" FontSize="40" 
+                                       VerticalAlignment="Center" FontWeight="Regular" Foreground="#363636"/>
 
+                                <Border Background="#363636" Height="2" VerticalAlignment="Bottom"/>
+                            </Grid>
+                        </Border>
 
-                    </Grid>
+                    </Border>
 
-                    <Grid Grid.Row="1" HorizontalAlignment="Center" Width="600">
-                        <TextBlock Text="Пароль"
-                                   FontSize="30"
-                                   />
-
-                        <TextBox Grid.ColumnSpan="2"
-                                 HorizontalAlignment="Right"
-                                 VerticalAlignment="Center"
-                                 FontSize="30"
-                                 Margin="20 0 0 0"
-                                 Background="Black"
-                                 Foreground="AliceBlue"
-                                 Width="300"/>
-
-
-                    </Grid>
-
-                    <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="0 20 0 0">
-                        <Button x:Name="btnRegistration"
-                                Width="300"
-                                FontSize="30"
-                                Content="Зарегистрироваться" 
-                                Click="btnRegistration_Click"/>
-
-                        <Button x:Name="btnEnter"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Center"
-                                Width="300"
-                                FontSize="30"
-                                Margin="20 0 0 0"
-                                Content="Войти"/>
-                    </StackPanel>
+                    <Frame x:Name="frmForms" Width="800" Height="650" NavigationUIVisibility="Hidden" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 
 
                 </Grid>
-            </Border>
+
+
+            </Grid>
         </Grid>
-
-
-
-    </Grid>
+    </Border>
 </Page>

@@ -72,7 +72,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\LogFormsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\LogPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\RegEnterPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\RegFormsAdditionalPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\RegFormsCommonPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -89,8 +109,23 @@
     <Compile Include="Pages\EnterPage.xaml.cs">
       <DependentUpon>EnterPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\LogFormsPage.xaml.cs">
+      <DependentUpon>LogFormsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LogPage.xaml.cs">
+      <DependentUpon>LogPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegEnterPage.xaml.cs">
+      <DependentUpon>RegEnterPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegFormsAdditionalPage.xaml.cs">
+      <DependentUpon>RegFormsAdditionalPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegFormsCommonPage.xaml.cs">
+      <DependentUpon>RegFormsCommonPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\RegistrationPage.xaml.cs">
       <DependentUpon>RegistrationPage.xaml</DependentUpon>
@@ -134,6 +169,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="AppImages\logo54.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AppImages\studentsTogether.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

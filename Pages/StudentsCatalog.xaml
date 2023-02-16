@@ -7,37 +7,72 @@
       mc:Ignorable="d" 
       d:DesignHeight="800"
       d:DesignWidth="1200"
-      Background="AliceBlue"
       Title="StudentsCatalog">
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="4*" />
-        </Grid.RowDefinitions>
+    <Border CornerRadius="20" Background="AliceBlue">
+        <Grid>
 
+            <Grid Grid.Column="1">
 
-        <Border Background="#00bfff">
-            <TextBlock Text="Список студентов" 
-                       FontSize="40"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
 
-            
-        </Border>
+                    <Border>
+                        <Border Background="AliceBlue" CornerRadius="20 20 0 0" Height="100">
+                            <Grid>
+                                <Image Source="/AppImages/logo54.png" Height="60" HorizontalAlignment="Left" Margin="20 0 0 0" Stretch="UniformToFill" Width="75"/>
 
-        <Grid Grid.Row="1">
-            <ListView Margin="30">
-
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <Border >
-                            
+                                <Label Content="#НашиСтуденты" HorizontalAlignment="Center" FontSize="40" 
+                                       VerticalAlignment="Center" FontWeight="Regular" Foreground="#363636"/>
+                            </Grid>
                         </Border>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </Grid>
 
-    </Grid>
+                    </Border>
+
+                    <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Hidden">
+                        <ListView Background="Transparent" d:ItemsSource="{d:SampleData ItemCount=5}" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Width="295" Height="151">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        
+                                        <Image Source="{Binding Row.Picture}" Stretch="Uniform" Width="100" Margin="10 10" />
+                                        
+                                        <StackPanel Grid.Column="1">
+                                            <TextBlock Text="Address" />
+                                            <TextBlock Text="{Binding Row.AddressLine}" />
+                                            <TextBlock Text="{Binding Row.AddressCityLine}" />
+                                            <TextBlock Text="EMAIL" Margin="0,13,0,0" />
+                                            <TextBlock Text="{Binding Row.Email}" />
+                                            <TextBlock Text="PHONE" Margin="0,13,0,0" />
+                                            <TextBlock Text="{Binding Row.HomePhone}" />
+                                        </StackPanel>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+
+                            <ListView.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel>
+                                        
+                                    </WrapPanel>
+                                </ItemsPanelTemplate>
+                            </ListView.ItemsPanel>
+                            
+                        </ListView>
+                    </ScrollViewer>
+
+
+                </Grid>
+
+
+            </Grid>
+        </Grid>
+    </Border>
 </Page>

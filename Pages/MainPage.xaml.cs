@@ -25,5 +25,6 @@ namespace Hakaton.Pages
         {
             ClassHelper.NavigateClass.navigFrame.Navigate(new StudentsCatalog());
         }
+
     }
 }
