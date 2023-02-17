@@ -11,27 +11,23 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using Hakaton.ClassHelper;
 using System.Windows.Shapes;
 
-namespace Hakaton
+namespace Hakaton.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для PofilePage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PofilePage : Page
     {
-        public MainWindow()
+        public PofilePage()
         {
             InitializeComponent();
-
-            ClassHelper.NavigateClass.navigFrame = frmMain;
-            ClassHelper.NavigateClass.navigFrame.Navigate(new Pages.MainPage());
         }
 
-        private void btnExit_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Environment.Exit(0);
+
         }
     }
 }
