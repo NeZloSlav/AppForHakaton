@@ -9,7 +9,13 @@
       d:DesignWidth="400"
       Title="RegistrationPage">
     
-    <Border CornerRadius="20 0 0 20" Background="#363636">
+    <Border CornerRadius="20 0 0 20">
+        <Border.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="#ffff7611" Offset="0"/>
+                <GradientStop Color="#ff005eab" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.Background>
         <Grid>
             <TextBlock Margin="30 30 0 0" FontSize="20" TextWrapping="Wrap">
             <Run FontSize="35">Регистрация</Run>

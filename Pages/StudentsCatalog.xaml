@@ -37,7 +37,12 @@
                     </Border>
 
                     <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Hidden">
-                        <ListView Background="Transparent" d:ItemsSource="{d:SampleData ItemCount=5}" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+
+                        <TextBlock Text="Тут список самых лучших студентов)" HorizontalAlignment="Center"
+                                   VerticalAlignment="Center" FontSize="50" />
+
+
+                        <!--<ListView Background="Transparent" d:ItemsSource="{d:SampleData ItemCount=5}" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <Grid Width="295" Height="151">
@@ -69,7 +74,7 @@
                                 </ItemsPanelTemplate>
                             </ListView.ItemsPanel>
                             
-                        </ListView>
+                        </ListView>-->
                     </ScrollViewer>
 
 
